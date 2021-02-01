@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<Context antiJARLocking="true" path="/sistema">
+    <Resource auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              jdbcCompiliantTruncation="false"
+              logAbandoned="true" name="jdbc/arcade_call"
+              maxTotal="60"
+              maxIdle="20"
+              maxWaitMillis="90000"
+              password="server2020"
+              removeAbandoned="true"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedOnMaintenance="true"
+              removeAbandonedTimeout="60"
+              type="javax.sql.DataSource"
+              url="jdbc:mysql://localhost:3306/arcade_call?autoReconnect=true"
+              username="admin"/>
+</Context>-->
+
+<Context antiJARLocking="true" path="/sistema">
+    <Resource auth="Container" 
+              driverClassName="com.mysql.jdbc.Driver" 
+              jdbcCompiliantTruncation="false" 
+              logAbandoned="true" name="jdbc/arcade_call" 
+              maxTotal="15" 
+              maxIdle="10"
+              password="sicsa2019" 
+              removeAbandoned="true" 
+              removeAbandonedTimeout="300" 
+              type="javax.sql.DataSource" 
+              url="jdbc:mysql://192.168.0.8:3306/arcade_call?autoReconnect=true" 
+              username="root"/>
+</Context>

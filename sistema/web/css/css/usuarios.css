@@ -1,0 +1,520 @@
+/* contenido del contenedor tabla de usuarios */
+.select_vacante {
+    background-color: #64b5f6;
+}
+.table_user {
+    margin-top: 1vh;
+    height: 84vh;
+    max-height: 84vh;
+    overflow: auto;
+    border-radius: 4px;
+}
+#modal_schedules {
+    background-color: #FFF;
+    background-image: url("../../image/users/fondo_time.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.fondo {
+    height: 150px;
+    background-image: url("../../image/users/fondo_time.png");
+    background-repeat: no-repeat;
+    background-size: 38%;
+    background-position-x: right;
+    /* background-color: rgb(33, 56, 119);
+    background-image: linear-gradient(rgb(2,135,180), rgb(1,26,80)); */
+}
+
+.box_delete_vacante {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    
+}
+.btn_circle_close {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+.btn_circle_close i {
+    padding: 5px;
+}
+.modal_schedules1{
+    overflow: visible!important; 
+}
+/* modificaciones del modal */
+.modal {
+    width: 75%;
+    max-height: 85%;
+    border-radius: 1px;
+}
+#btn_close_vacantes {
+    border-radius: 20px;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+#btn_close_vacantes i{
+    padding: 5px;
+}
+#modal_puestos {
+    width: 40%;
+    background-image: url("../../image/users/fondo_time.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+#modal_nueva_vacante {
+    width: 50%;
+}
+#modal_delete_vacante {
+    width: 50%;
+}
+.caja_puesto {
+    max-height: 50vh;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.image_perfil {
+    visibility: collapse;
+}
+
+/* ocutar el scroll de overflow actulamente solo funciona en crhome */
+.inner::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: rgb(255, 255, 255);
+}
+
+.inner::-webkit-scrollbar-thumb {
+    width: 0px;
+    height: 0px;
+    background: rgb(255, 255, 255);
+}
+
+/* estilos de botonses */
+/* modificaciones de inputs */
+input {
+    font-weight: bold;
+}
+
+input[type=text]:not(.browser-default) {
+    border-bottom: 1px solid hsla(0, 0%, 76%, 0.336);
+    height: 2rem;
+    color: rgb(70, 70, 70);
+}
+
+;
+
+.input-field>label {
+    color: #3a3a3a;
+}
+
+select {
+    height: 2rem;
+}
+
+.tabs {
+    bottom: -58px;
+    background-color: transparent;
+}
+
+.modal .modal-footer {
+    background-color: transparent;
+}
+
+.cont_img {
+    text-align: center;
+    border: 4px solid white;
+    background-color: rgb(255, 255, 255);
+    background-image: url("image/users/1.jpg");
+    background-size: cover;
+    margin-top: 4ch;
+    border-radius: 50%;
+}
+
+.data_user {
+    background-image: linear-gradient(rgba(233, 233, 233, 0.9), rgba(255, 255, 255, 1));
+    overflow: auto;
+}
+
+.options {
+    margin-top: 1rem;
+}
+
+.options2 {
+    display: none;
+}
+
+.options .material-icons {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.options2 .material-icons {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 26px;
+    background-color: #3a3a3a1e;
+
+}
+
+.left_btn {
+    right: auto;
+    left: 20px;
+}
+
+.btn-floating:hover {
+    background-color: #2d9bc7;
+}
+.modal-alert {
+    width: 25%;
+}
+#modal_create_schedules {
+    width: 50%;
+    background-image: url("../../image/users/fondo_time.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.timepicker-digital-display {
+    background-color: #c72d47;
+}
+
+.data_hours {
+    margin-bottom: 1rem;
+}
+.collection a.collection-item {
+    color: #2196F3;
+}
+.box_vacantes {
+   max-height: 60vh; 
+   overflow: auto;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+#modal_user_puestos {
+    background-image: url("../../image/users/fondo_time.png");
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+/* modificaciones para pantalla pequeña */
+@media only screen and (max-width: 601px) {
+    .modal .modal-content {
+        padding: 24px 2px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .modal {
+        top: 5%;
+        max-height: 85%;
+        width: 90%;
+    }
+
+    .tabs {
+        bottom: -5px;
+        background-color: transparent;
+    }
+
+    .cont_img {
+        margin-top: 7ch;
+    }
+
+    .data_user {
+        background-image: linear-gradient(rgba(240, 240, 240, 0.767), rgba(255, 255, 255, 1));
+        border-radius: 25px 25px 0px 0px;
+    }
+
+    .fondo {
+        height: 165px !important;
+    }
+
+    .options {
+        display: none;
+    }
+
+    .options2 {
+        margin-top: -60px;
+        display: block;
+    }
+
+    .fixed-action-btn {
+        bottom: auto;
+        top: 35px;
+    }
+    
+    .modal-alert {
+        width: 80%;
+    }
+    #modal_create_schedules {
+        width: 80%;
+    }
+    #modal_schedules {
+        background-size: 70%;
+    }
+    #modal_create_schedules {
+        background-size: 70%;
+    }
+    #modal_puestos {
+        width: 90%;
+    }
+    #modal_nueva_vacante {
+        width: 90%;
+    }
+}
+
+.modal .modal-content {
+    padding: 0px 0px;
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid hsla(202, 100%, 47%, 0);
+    margin: 0 0 6px 0;
+}
+
+
+
+.box_image {
+    color: rgb(58, 58, 58);
+    margin-top: -140px;
+    padding: 0 0.1px !important;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+table.highlight>tbody>tr {
+    transition: 0.99s;
+}
+
+table.highlight>tbody>tr:hover {
+    transition: 0.99s;
+    background-color: rgba(75, 219, 255, 0.404) !important;
+    cursor: pointer;
+    
+}
+
+.input-field {
+    margin-bottom: 0.1rem;
+}
+
+.input-field .prefix {
+    top: 0;
+}
+
+.flow-text {
+    font-size: 1.3rem;
+}
+
+.tabs .tab a.active {
+    color: #000;
+    border-radius: 50px;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+    background-color: #dadada5b;
+    outline: none;
+    border-radius: 50px;
+}
+
+.tabs .tab a {
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+}
+
+.tabs .indicator {
+    background-color: #ffffff00;
+}
+
+.tabs .tab a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+.div_btn {
+    margin-bottom: 1rem;
+}
+
+.options {
+    margin-top: 1rem;
+#test-swipe-2 label{
+    color: #414141;
+}
+/*
+.icon_nav {
+    line-height: 50px !important;
+    margin-left: 5px;
+}*/
+
+.search {
+    width: 50% !important;
+    height: 2.3rem !important;
+    margin-left: 25% !important;
+    line-height: 40px !important;
+    border-radius: 25px !important;
+    color: #ffffff !important;
+}
+
+.logo_principal{
+    width: 3%;
+    padding:0;
+    position:absolute;
+    font-size:2.1rem;
+    height: 40px;
+}
+
+/*.ul_margin_top{
+    margin-top:-46px;
+}*/
+/*
+.size_ul{
+     height: 40px !important;
+     line-height: 40px !important;
+}*/
+
+.img_log{
+    width: 40px;
+    margin: 12%;   
+}
+
+nav input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    -webkit-box-shadow: 0 1px 0 0 #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}
+
+.datepicker-date-display {
+    background-color: #c72d47;
+}
+
+}
+
+.options .material-icons {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* nav */
+nav {
+    height: 50px;
+}
+
+#test-swipe-2 label{
+    color: #414141;
+}
+
+/*.icon_nav {
+    line-height: 50px !important;
+    margin-left: 5px;
+}*/
+
+.search {
+    width: 50% !important;
+    height: 2.3rem !important;
+    margin-left: 25% !important;
+    line-height: 40px !important;
+    border-radius: 25px !important;
+    color: #ffffff !important;
+}
+
+.logo_principal{
+    width: 3%;
+    padding:0;
+    position:absolute;
+    font-size:2.1rem;
+    height: 40px;
+}
+
+/*.ul_margin_top{
+    margin-top:-46px;
+}*/
+
+/*.size_ul{
+     height: 40px !important;
+     line-height: 40px !important;
+}*/
+
+.img_log{
+    width: 40px;
+    margin: 12%;   
+}
+
+nav input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    -webkit-box-shadow: 0 1px 0 0 #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}
+
+.datepicker-date-display {
+    background-color: #c72d47;
+}
+
+.cont_doc {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.div_tabs {
+    margin-bottom: 1rem;
+}
+
+.nex,
+.prev {
+    background-color: rgba(58, 58, 58, 0.267);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn_alert {
+    width: 90%;
+    margin-left: 5%;
+}
+.table_horario {
+    max-height: 60vh;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+.table_horario td {
+    padding: 6px 5px;
+}
+.box_btn {
+    margin-bottom: 1rem;
+}
+.dropdown-content li > span {
+    color: #2196F3;
+}
+td {
+    cursor: pointer;
+}
+
+#modal_nuevo_usuario input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+.add_user {
+    margin-right: 15px;
+}
