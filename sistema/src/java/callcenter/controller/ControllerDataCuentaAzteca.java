@@ -33,7 +33,7 @@ public class ControllerDataCuentaAzteca extends HttpServlet {
         request.setAttribute("telefono", telefono);
         request.setAttribute("id_usuario", id_usuario);
         request.setAttribute("cuenta", cuenta);
-        getServletContext().getRequestDispatcher("/predictivo_oscar.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/predictivo_azteca_version_3.jsp").forward(request, response);
 //        getServletContext().getRequestDispatcher("/predictivo_azteca.jsp").forward(request, response);
     }
 

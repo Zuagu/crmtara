@@ -129,13 +129,14 @@ table {
 #gestion {
     height: 100px !important;
     overflow: auto !important;
+    color: white;
 }
 
 #div_input_gestor_tiempos input{
     margin: 0px !important;
     height: 1.43rem !important;
     font-size: 14px;
-    color: #000;
+    color: #c1ccdc;
     font-weight: bold;
 }
 .div_input_gestor_tiempos {
