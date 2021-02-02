@@ -2,7 +2,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background: linear-gradient(#141e30, #141e30);
 }
 
 
@@ -55,29 +55,37 @@ input.invalid[type="text"]:not(.browser-default) {
 }
 
 input[type="text"]:not(.browser-default).validate + label {
-    color: #000;
+    color: #9c9c9c;
 }
 
-#info_gestor_secundario input{
-    margin: 0px !important;
-    border: none;
-    border-radius: 2px;
-    height: 1.4rem !important;
-    font-size: 14px;
-    color: #000;
+#info_gestor input{
+    color: #c1ccdc;
     font-weight: bold;
+    background-color: #141e30bd;
 }
 
+
+
+.collection .collection-item {
+    background-color: #141e30bd;
+    color: #c1ccdc;
+}
+
+
+table {
+    color: #c1ccdc;
+}
+/*
 #info_gestor_secundario .input-field {
     margin-top: 0.5rem !important;
     margin-bottom: 0.2rem !important;
-}
+}*/
 
 #div_gestor_gestion input{
     margin: 0px !important;
-    height: 1.43rem !important;
+    height: 1.6rem !important;
     font-size: 14px;
-    color: #000;
+    color: #c1ccdc;
     font-weight: bold;
 }
 
@@ -105,7 +113,17 @@ input[type="text"]:not(.browser-default).validate + label {
 
 #div_gestor_gestion {
     margin-top: 7px;
-    height: 195px;
+    height: 197px;
+}
+
+.sidenav {
+    background-color: #2e3035;
+    color: #FFFFFF;
+}
+
+.sidenav .collapsible-body, .sidenav.fixed .collapsible-body {
+    border: 0;
+    background-color: #06080a;
 }
 
 #gestion {
@@ -193,7 +211,7 @@ input[type="text"]:not(.browser-default).validate + label {
 }
 
 .div_gestor_contenido {
-    height: 235px;
+    height: 218px;
     overflow: auto;
     padding: 0 1px !important;
 }
@@ -203,7 +221,7 @@ input[type="text"]:not(.browser-default).validate + label {
 }
 
 .datos_marcacion_directa label {
-    color: black;
+    color: #c1ccdc;
     font-weight: bold;
 }
 
@@ -247,7 +265,7 @@ input[type="text"]:not(.browser-default).validate + label {
 
 .gestor_tab {
     
-    color: #000 !important;
+    color: #c1ccdc !important;
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
@@ -255,17 +273,26 @@ input[type="text"]:not(.browser-default).validate + label {
     outline: none;
 }
 .grey.lighten-1 {
-    background-color: #d6d7da !important;
+    background-color: #2e3035 !important;
 }
 
 #info_gestor #buscador_cuentas_gestor {
     margin: 0px !important;
+    margin-top: 10px !important;
+    margin-left: 38px !important;
     border: none;
-    height: 2rem !important;
+    height: 1.7rem !important;
     border-radius: 2px;
     font-size: 14px;
-    color: #000;
+    color: #c1ccdc;
     font-weight: bold;
+}
+.buscador_cuentas label {
+    margin-top: 6px !important;
+}
+
+#buscar_cuentas {
+    cursor: pointer;
 }
 
 .botones_header {
@@ -276,4 +303,11 @@ input[type="text"]:not(.browser-default).validate + label {
 
 .collection {
     margin: .5rem 0 0.1rem 0;
+}
+.modal input {
+    color: #c1ccdc !important;
+}
+.modal {
+    background-color: #26282f !important;
+    color: #c1ccdc;
 }

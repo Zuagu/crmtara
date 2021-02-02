@@ -438,22 +438,22 @@ function select_datos_cuenta(_cuenta) {
             $("#datos_marcacion_directa2").empty();
             $("#datos_marcacion_directa1").append(`
                 <label>Referencia 1</label>
-                <li class="collection-item black-text">${datos_cuenta.NOM_TEL1}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO1_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO1}</a></li>
+                <li class="collection-item">${datos_cuenta.NOM_TEL1}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO1_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO1}</a></li>
                 <label>Referencia 2</label>
-                <li class="collection-item black-text">${datos_cuenta.NOM_TEL2}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO2_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO2}</a></li>
+                <li class="collection-item">${datos_cuenta.NOM_TEL2}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO2_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO2}</a></li>
             `);
             $("#datos_marcacion_directa2").append(`
                 <label>Referencia 3</label>
-                <li class="collection-item black-text">${datos_cuenta.NOM_TEL3}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO3_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO3}</a></li>
+                <li class="collection-item">${datos_cuenta.NOM_TEL3}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO3_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO3}</a></li>
                 <label>Referencia 4</label>
-                <li class="collection-item black-text">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
+                <li class="collection-item">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
             `);
             
             
             $("#datos_marcacion_aval").empty();
             $("#datos_marcacion_aval").append(`<label>Aval Direcion: ${datos_cuenta.COLONIAAVAL} ${datos_cuenta.CALLEAVAL} ${datos_cuenta.NUMEXTAVAL}</label>
-                <li class="collection-item black-text">${datos_cuenta.NOMBRE_AVAL}.</a></li>
-                <li class="collection-item black-text">.<a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELAVAL2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELAVAL}</a></li>
+                <li class="collection-item">${datos_cuenta.NOMBRE_AVAL}.</a></li>
+                <li class="collection-item">.<a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELAVAL2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELAVAL}</a></li>
             `);
 
             select_gestiones_cuenta(datos_cuenta["CLIENTE_UNICO"], "0000-00-00", "tbody_tabla_gestiones");
@@ -750,22 +750,22 @@ function select_cuenta_siguiente(_id_usuario) {
                 $("#datos_marcacion_directa2").empty();
                 $("#datos_marcacion_directa1").append(`
                     <label>Referencia 1</label>
-                    <li class="collection-item black-text">${datos_cuenta.NOM_TEL1}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO1_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO1}</a></li>
+                    <li class="collection-item">${datos_cuenta.NOM_TEL1}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO1_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO1}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO1}</a></li>
                     <label>Referencia 2</label>
-                    <li class="collection-item black-text">${datos_cuenta.NOM_TEL2}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO2_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO2}</a></li>
+                    <li class="collection-item">${datos_cuenta.NOM_TEL2}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO2_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO2}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO2}</a></li>
                 `);
                 $("#datos_marcacion_directa2").append(`
                     <label>Referencia 3</label>
-                    <li class="collection-item black-text">${datos_cuenta.NOM_TEL3}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO3_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO3}</a></li>
+                    <li class="collection-item">${datos_cuenta.NOM_TEL3}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO3_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO3}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO3}</a></li>
                     <label>Referencia 4</label>
-                    <li class="collection-item black-text">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
+                    <li class="collection-item">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
                 `);
                 
                 
                 $("#datos_marcacion_aval").empty();
                 $("#datos_marcacion_aval").append(`<label>Aval Direcion: ${datos_cuenta.COLONIAAVAL} ${datos_cuenta.CALLEAVAL} ${datos_cuenta.NUMEXTAVAL}</label>
-                    <li class="collection-item black-text">${datos_cuenta.NOMBRE_AVAL}.</a></li>
-                    <li class="collection-item black-text">.<a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELAVAL2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELAVAL}</a></li>
+                    <li class="collection-item">${datos_cuenta.NOMBRE_AVAL}.</a></li>
+                    <li class="collection-item">.<a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELAVAL2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELAVAL}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELAVAL}</a></li>
                 `);
 
                 $('#cuenta_siguiente').removeClass('disabled');

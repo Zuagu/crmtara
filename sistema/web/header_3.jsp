@@ -24,8 +24,8 @@
 </ul>
 
 <div class="botones_header">
-    <i class="material-icons img_log">menu</i>
-    <a class="size_perfil dropdown-trigger black-text" href="#!" data-target="dropdown1"><i id="foto_perfil" class="material-icons">account_circle</i></a>
+    <i class="material-icons white-text img_log">menu</i>
+    <a class="size_perfil dropdown-trigger white-text" href="#!" data-target="dropdown1"><i id="foto_perfil" class="material-icons">account_circle</i></a>
 </div>
 
 <!--<nav class="header_nav blue darken-1">

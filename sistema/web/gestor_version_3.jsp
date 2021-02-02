@@ -41,86 +41,82 @@
                 <div class=" col s12 m12 l12 z-depth-1  grey lighten-1">
                     <div class=" col s12 m12 l12">
                         <div class="col s5 m5 l5 offset-l1 offset-m1">
-                            <h6><b>INFORMACION DEL CLIENTE</b></h6>
+                            <h6 class="white-text">INFORMACION DEL CLIENTE</h6>
                         </div>
-                        <div class="col s6 m6 l6 ">
-                            <div class="col s1 m1 l1 grey lighten-1 left-align">
-                                <a id="buscar_cuentas" <i class="material-icons">search</i></a>
-                            </div>
-                            <div class="col s10 m10 l10">
-                                <input id="buscador_cuentas_gestor" class="buscador search_cuentas center-align white" type="text" placeholder="Buscar">
-                            </div>
-
+                        <div class="input-field col s6 m6 l6 buscador_cuentas">
+                            <i id="buscar_cuentas" class="material-icons prefix white-text">search</i>
+                            <input id="buscador_cuentas_gestor" class="buscador search_cuentas center-align " type="text" placeholder="Buscar">
+                            <label for="buscador_cuentas_gestor" class="white-text">First Name</label>
                         </div>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="CLIENTE_UNICO" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="CLIENTE_UNICO" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label  for="CLIENTE_UNICO">CUENTA</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="NOMBRE_CTE" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="NOMBRE_CTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="NOMBRE_CTE">TITULAR</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="GERENCIA" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="GERENCIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="GERENCIA">GERENCIA</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="CAMPANIA" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="CAMPANIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="CAMPANIA">PRODUCTO</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="GERENTE" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="GERENTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="GERENTE">GERENTE</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="doce" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="doce" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="">SUBPRODUCTO</label>
                     </div>
                     <div class="input-field col s6 m6 l6">
-                        <input id="ETAPA" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="ETAPA" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="ETAPA">TIPO</label>
                     </div>
                     <div class=" input-field col s12 m12 l12">
-                        <input id="Direccion" type="text" class="validate white" placeholder="" readonly="readonly" value="">
+                        <input id="Direccion" type="text" class="validate" placeholder="" readonly="readonly" value="">
                         <label for="Direccion">DIRECCION</label>
                     </div>
 
 
                     <div class="col s12 m12 l12">
-                        <h6><b>INFORMACION ECONOMICA</b></h6>
+                        <h6 class="white-text">INFORMACION ECONOMICA</h6>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="SALDO" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="SALDO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="SALDO">CAPITAL</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="MORATORIOS" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="MORATORIOS" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="MORATORIOS">MORATORIO</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="ATRASO_MAXIMO" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="ATRASO_MAXIMO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="ATRASO_MAXIMO">SEMANA</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="IMP_ULTIMO_PAGO" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="IMP_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="IMP_ULTIMO_PAGO">ULT. PAGO</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="DIA_DE_PAGO" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="DIA_DE_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="DIA_DE_PAGO">DIA DE PAGO</label>
                     </div>
 
                     <div class="input-field col s4 m4 l4">
-                        <input id="FECHA_ULTIMO_PAGO" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="FECHA_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="FECHA_ULTIMO_PAGO">FECHA ULTIMO PAGO</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="CRM" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="CRM" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="CRM">ESTATUS</label>
                     </div>
                     <div class="input-field col s4 m4 l4">
-                        <input id="SALDO_TOTAL" type="text" class="validate white" placeholder="" readonly="readonly"  value="">
+                        <input id="SALDO_TOTAL" type="text" class="validate" placeholder="" readonly="readonly"  value="">
                         <label for="SALDO_TOTAL">TOTAL</label>
                     </div>
                 </div>
@@ -132,8 +128,8 @@
                     <ul id="datos_marcacion_aval" class="collection coll_1 datos_marcacion_directa">
                         <!--<label>Aval Calle: Num: Colonia: Municipio: Estado: </label>-->
                         <label >Aval Calle:</label>
-                        <li class="collection-item black-text">Nombre del Aval</li>
-                        <li class="collection-item black-text">.<a class="right" href="zoiper://">Telefono 2</a><a class="right" href="zoiper://">Telefono 1</a></li>
+                        <li class="collection-item">Nombre del Aval</li>
+                        <li class="collection-item">.<a class="right" href="zoiper://">Telefono 2</a><a class="right" href="zoiper://">Telefono 1</a></li>
                     </ul>
                     <div id="edit_datos_marcacion_aval" class="col s9 m9 l9 margin_top_7px hide">
                         <div class="input-field col s6 m6 l6">
@@ -162,15 +158,15 @@
 
                     <ul id="datos_marcacion_directa1" class="collection datos_marcacion_directa">
                         <label>Referencia 3</label>
-                        <li class="collection-item black-text">Nombre 3<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
+                        <li class="collection-item">Nombre 3<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 4</label>
-                        <li class="collection-item black-text">Nombre 4<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
+                        <li class="collection-item">Nombre 4<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                     </ul>
                     <ul id="datos_marcacion_directa2" class="collection datos_marcacion_directa">
                         <label>Referencia 1</label>
-                        <li class="collection-item black-text">Nombre 1<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
+                        <li class="collection-item">Nombre 1<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 2</label>
-                        <li class="collection-item black-text">Nombre 2<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
+                        <li class="collection-item">Nombre 2<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                     </ul>
 
                     <div id="editar_marcacion_directa" class="col s12 m12 l12 hide">
@@ -262,7 +258,7 @@
                 </div>
                 <!--componente de secciones de las tabs de tabs-->
                 <div id="div_gestiones" class="col s12 z-depth-1 div_gestor_contenido grey lighten-1"> 
-                    <table class="highlight white" id="tabla_gestiones">
+                    <table class="highlight" id="tabla_gestiones">
                         <thead class="blue">
                             <tr class="text-white">
                                 <td> <b>FECHA</b></td>
@@ -280,7 +276,7 @@
                     </table>
                 </div>
                 <div id="div_pagos" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
-                    <table class="highlight white" id="tabla_pagos">
+                    <table class="highlight" id="tabla_pagos">
                         <thead class="blue">
                             <tr class="text-white">
                                 <td><b>FOLIO</b></td>
@@ -299,7 +295,7 @@
                 <div id="div_agendas" class="col s12 z-depth-1 div_gestor_contenido grey lighten-1">
                     <input id="id_reg_agenda" type="hidden">
                     <div class="col s12 m9 l9">
-                        <table class="white">
+                        <table class="highlight">
                             <thead>
                                 <tr class="blue">
                                     <th>ID</th>
@@ -331,7 +327,7 @@
 
                 </div>
                 <div id="div_convenios" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
-                    <table class="highlight white" id="tabla_convenios">
+                    <table class="highlight" id="tabla_convenios">
                         <thead class="blue">
                             <tr class="text-white">
                                 <td><b>CUENTA</b></td>
@@ -368,7 +364,7 @@
                         <select id="codigo_llamada"></select>
                     </div>
 
-                    <div class="col s12 m12 l12  div_gestor_gestion white">
+                    <div class="col s12 m12 l12  div_gestor_gestion">
                         <textarea id="gestion" readonly="" class="materialize-textarea limpiar_texto" data-length="1000" placeholder="Gestion"></textarea>
                     </div>
                     <ul class="collection col s12 right-align">
@@ -572,8 +568,8 @@
                             <tr>
                                 <th>CLIENTE_UNICO</th>
                                 <th>DESCRIPCION</th>
-                                <th>FECHA</th>
-                                <th>HORA</th>
+                                <th>AVAL</th>
+                                <th>ESTATUS</th>
                             </tr>
                         </thead>
                         <tbody id="tb_cont_busqueda">
