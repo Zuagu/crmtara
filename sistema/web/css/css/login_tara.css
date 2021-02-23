@@ -165,3 +165,9 @@ body {
     bottom: 100%;
   }
 }
+
+
+#enviar_data {
+    background-color: transparent !important;
+    border: none;
+}

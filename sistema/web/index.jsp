@@ -18,22 +18,24 @@
 
         <div class="login-box">
             <h2>Login</h2>
-            <form>
+            <form id="login" class="back" style="" name="login" action="/sistema/main.jsp" method="post">
                 <div class="user-box">
-                    <input type="text" name="" required="">
+                    <input id="id_usuario" type="text" name="id_usuario" required="">
                     <label>Username</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" name="" required="">
+                    <input id="password" type="password" name="password" required="">
                     <label>Password</label>
                 </div>
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Submit
-                </a>
+                <button id="enviar_data">
+                    <a>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Submit
+                    </a>
+                </button>
             </form>
         </div>
     </body>

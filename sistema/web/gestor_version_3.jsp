@@ -131,7 +131,7 @@
                         <li class="collection-item">Nombre del Aval</li>
                         <li class="collection-item">.<a class="right" href="zoiper://">Telefono 2</a><a class="right" href="zoiper://">Telefono 1</a></li>
                     </ul>
-                    <div id="edit_datos_marcacion_aval" class="col s9 m9 l9 margin_top_7px hide">
+                    <div id="edit_datos_marcacion_aval" class="col s12 m12 l12 margin_top_7px hide">
                         <div class="input-field col s6 m6 l6">
                             <input id="NOMBRE_AVAL" type="text" class="validate" placeholder=""  value="">
                             <label for="NOMBRE_AVAL">Contacto Aval</label>
@@ -150,19 +150,18 @@
                         </div>
                     </div>
 
-                    <ul class="collection coll_2 right-align">
+                    <ul class="collection col s12 right-align">
                         <a id="save_info_aval" class="btn-small hide blue">actualizar</a>
                         <a id="editar_info_aval" class="btn-small blue">editar</a>
                     </ul>
-
-
-                    <ul id="datos_marcacion_directa1" class="collection datos_marcacion_directa">
+                    
+                    <ul id="datos_marcacion_directa1" class="collection datos_marcacion_directa col s12">
                         <label>Referencia 3</label>
                         <li class="collection-item">Nombre 3<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 4</label>
                         <li class="collection-item">Nombre 4<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                     </ul>
-                    <ul id="datos_marcacion_directa2" class="collection datos_marcacion_directa">
+                    <ul id="datos_marcacion_directa2" class="collection datos_marcacion_directa col s12">
                         <label>Referencia 1</label>
                         <li class="collection-item">Nombre 1<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 2</label>
@@ -171,13 +170,13 @@
 
                     <div id="editar_marcacion_directa" class="col s12 m12 l12 hide">
                         <div class="col s12 m12 l12">
-                            <h6>Referencias</h6>
+                            <h6 class="white-text">Referencias</h6>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL1" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL1">Contacto 1</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="TELEFONO1" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO1">Tel. 1</label>
                         </div>
@@ -185,7 +184,7 @@
                             <input id="TELEFONO1_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO1_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL2" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL2">Contacto 2</label>
                         </div>
@@ -197,7 +196,7 @@
                             <input id="TELEFONO2_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO2_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL3" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL3">Contacto 3</label>
                         </div>
@@ -209,7 +208,7 @@
                             <input id="TELEFONO3_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO3_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL4" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL4">Contacto 4</label>
                         </div>
@@ -221,7 +220,7 @@
                             <input id="TELEFONO4_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO4_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6 hide">
+                        <div class="input-field col s4 m4 l4 hide">
                             <input id="NOM_TEL5" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL5">Contacto 5</label>
                         </div>
@@ -235,7 +234,7 @@
                         </div>
                     </div>
 
-                    <ul class="collection coll_2 right-align">
+                    <ul class="collection col s12 right-align">
                         <a id="edit_num" class="btn-small blue">editar</a>
                         <a id="save_num" class="btn-small blue hide">actualizar</a>
                     </ul>
@@ -679,102 +678,16 @@
                 <div class="col s12 m12 l12">
                     <div class="slider">
                         <ul id="cont_de_imagenes" class="slides">
+                            
                             <li>
-                                <img src="image/banco_1.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_2.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_3.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_4.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_5.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_6.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_7.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_8.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_9.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_10.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_11.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_12.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_13.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_14.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_15.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_16.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_17.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_18.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_19.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_20.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_21.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_22.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_23.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_24.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_25.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_26.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_27.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_28.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_29.png"> <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="image/banco_30.png"> <!-- random image -->
+                                <!--<img src="image/banco_30.png">  random image -->
                                 <div class="caption center-align">
                                     <h3>This is our big Tagline!</h3>
                                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
                                 </div>
                             </li>
                             <li>
-                                <img src="image/banco_31.png"> <!-- random image -->
+                                <!--<img src="image/banco_31.png">  random image -->
                             </li>
                         </ul>
                     </div>

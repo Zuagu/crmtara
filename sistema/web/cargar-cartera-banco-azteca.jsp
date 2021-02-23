@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/css/icons-material.css">
         <link rel="stylesheet" type="text/css" href="css/css/materialize.min.css">
         <!--<link rel="stylesheet" type="text/css" href="css/css/style.css">-->
-        <link rel="stylesheet" type="text/css" href="css/css/style_gestor.css">
+        <link rel="stylesheet" type="text/css" href="css/css/style_gestor_black.css">
         <style>
             .encabezados_csv span {
                 background-color: rgba(0, 0, 0, 0.13);
@@ -35,63 +35,15 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="col s12 m12 l12">
-
-                    <div class="encabezados_csv center-align hide">
-                        <h4>Encabezados del archivo CSV</h4>
-                        <span>cliente_id</span>
-                        <span>PLAN</span>
-                        <span>STATUS</span> 
-                        <span>GRUPO</span> 
-                        <span>NOMBRE</span>
-                        <span>EDAD</span>
-                        <span>RANGO_DE_EDAD</span>
-                        <span>ATRASO_MAXIMO</span>
-                        <span>ETAPA</span>
-                        <span>SCORE</span>
-                        <span>SALDO</span> 
-                        <span>RANGO</span> 
-                        <span>MORATORIOS</span> 
-                        <span>SALDO_TOTAL</span> 
-                        <span>ZONA</span> 
-                        <span>REGION</span>
-                        <span>GERENCIA</span>
-                        <span>DIA_DE_PAGO</span>
-                        <span>PRODUCTO</span>
-                        <span>MICRO</span>
-                        <span>ITALIKA</span>
-                        <span>CANAL</span>
-                        <span>FECHA_PAGO</span>
-                        <span>ANO_PAGO</span>
-                        <span>IMPORTE</span>
-                        <span>AVAL</span>
-                        <span>NOMBRE_AVAL</span>
-                        <span>MIGRADO_A_CYBER</span>
-                        <span>CUADRANTE</span>
-                        <span>ZONA_GEO</span>
-                        <span>RFC</span>
-                        <span>TEL_AVAL</span>
-                        <span>TIPO_TEL_AVAL</span>
-                        <span>TEL1</span>
-                        <span>TIPO1</span>
-                        <span>TEL2</span>
-                        <span>TIPO2</span>
-                        <span>TEL3</span>
-                        <span>TIPO3</span>
-                        <span>TEL4</span>
-                        <span>TIPO4</span>
-                        <span>FECHA_INICIO</span>
-                        <span>FECHA_RETIRO</span>
-                        <span>FECHA_REINGRESO</span>
-                    </div>
                 </div>
-                <div class="col s4 m4 l4 offset-l4 offset-m4 z-depth-2">
+                <div class="col s12 m6 l6 offset-l3 offset-m3 z-depth-2 grey darken-4">
                     <form method="POST" action="ControllerUploadFiles" enctype="multipart/form-data">
                         <div class="col s12 m12 l12">
-                            <h6>Carga de Cuentas</h6>
+                            <h6 class="grey-text">Carga de Cuentas</h6>
                         </div> 
                         <div class="file-field input-field">
                             <div class="btn blue">
-                                <span>CSV</span>
+                                <span>Archivo CSV</span>
                                 <input type="file" name="uploadFile" accept=".csv">
                             </div>
                             <div class="file-path-wrapper">

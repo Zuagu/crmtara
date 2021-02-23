@@ -1,12 +1,23 @@
-html {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+
+.img_log, #foto_perfil{
+    width: 27px;
+    margin: 12%;  
+    margin-top: 3px;
+}
+nav{
+    height: 35px;
+    line-height: 33px;
+}
+nav .nav-wrapper i {
+    height: 30px;
+    line-height: 33px;
+}
+
+body {
     background: linear-gradient(#141e30, #141e30);
 }
 
-
-sidenav li > a {
+.sidenav li > a {
     cursor: pointer !important; 
 }
 
@@ -35,9 +46,7 @@ nav .btn-flat {
 
 #info_gestor input{
     margin: 0px !important;
-    border: none;
-    border-radius: 2px;
-    height: 1.4rem !important;
+    height: 1rem !important;
     font-size: 14px;
     color: #000;
     font-weight: bold;
@@ -55,37 +64,27 @@ input.invalid[type="text"]:not(.browser-default) {
 }
 
 input[type="text"]:not(.browser-default).validate + label {
-    color: #9c9c9c;
+    color: #000;
 }
 
-#info_gestor input{
-    color: #c1ccdc;
+#info_gestor_secundario input{
+    margin: 0px !important;
+    height: 1.43rem !important;
+    font-size: 14px;
+    color: #000;
     font-weight: bold;
-    background-color: #141e30bd;
 }
 
-
-
-.collection .collection-item {
-    background-color: #141e30bd;
-    color: #c1ccdc;
-}
-
-
-table {
-    color: #c1ccdc;
-}
-/*
 #info_gestor_secundario .input-field {
     margin-top: 0.5rem !important;
     margin-bottom: 0.2rem !important;
-}*/
+}
 
 #div_gestor_gestion input{
     margin: 0px !important;
-    height: 1.6rem !important;
+    height: 1.43rem !important;
     font-size: 14px;
-    color: #c1ccdc;
+    color: #000;
     font-weight: bold;
 }
 
@@ -97,7 +96,7 @@ table {
     display: inline-block;
 }
 .div_data_aval ul .btn-small {
-     margin: 5px 0px;
+    margin: 5px 0px;
 }
 .div_data_aval .coll_1 {
     width: 80%;
@@ -113,31 +112,19 @@ table {
 
 #div_gestor_gestion {
     margin-top: 7px;
-    height: 197px;
-}
-
-.sidenav {
-    background-color: #2e3035;
-    color: #FFFFFF;
-}
-
-.sidenav .collapsible-body, .sidenav.fixed .collapsible-body {
-    border: 0;
-    background-color: #06080a;
+    height: 164px;
 }
 
 #gestion {
-    height: 100px !important;
+    height: 110px !important;
     overflow: auto !important;
-    background-color: rgba(189, 189, 189, 0.2);
-    color: white;
 }
 
 #div_input_gestor_tiempos input{
     margin: 0px !important;
     height: 1.43rem !important;
     font-size: 14px;
-    color: #c1ccdc;
+    color: #000;
     font-weight: bold;
 }
 .div_input_gestor_tiempos {
@@ -147,6 +134,8 @@ table {
     margin-top: 0.5rem !important;
     margin-bottom: 0.2rem !important;
 }
+
+
 
 
 .marcacion_directa .collection .collection-item a {
@@ -177,22 +166,10 @@ table {
     margin: 0px !important;
     height: 1.43rem !important;
     font-size: 14px;
-    color: #FFF;
+    color: #000;
     font-weight: bold;
 }
 #editar_marcacion_directa .input-field {
-    margin-top: 0.87rem !important;
-    margin-bottom: 0.2rem !important;
-}
-
-#edit_datos_marcacion_aval input{
-    margin: 0px !important;
-    height: 1.43rem !important;
-    font-size: 14px;
-    color: #FFF;
-    font-weight: bold;
-}
-#edit_datos_marcacion_aval .input-field {
     margin-top: 0.87rem !important;
     margin-bottom: 0.2rem !important;
 }
@@ -225,7 +202,7 @@ table {
 }
 
 .div_gestor_contenido {
-    height: 218px;
+    height: 235px;
     overflow: auto;
     padding: 0 1px !important;
 }
@@ -235,7 +212,7 @@ table {
 }
 
 .datos_marcacion_directa label {
-    color: #c1ccdc;
+    color: black;
     font-weight: bold;
 }
 
@@ -263,65 +240,4 @@ table {
 
 .div_btn_pwd .input-field {
     margin-bottom: 0.1rem;
-}
-
-.collection {
-    border: 0px !important;
-}
-
-.tabs {
-    height: 35px;
-    line-height: 38px !important;
-}
-.tabs .tab{
-    line-height: 38px !important;
-}
-
-.gestor_tab {
-    
-    color: #c1ccdc !important;
-}
-
-.tabs .tab a:focus, .tabs .tab a:focus.active {
-    background-color: #02010133;
-    outline: none;
-}
-.grey.lighten-1 {
-    background-color: #2e3035 !important;
-}
-
-#info_gestor #buscador_cuentas_gestor {
-    margin: 0px !important;
-    margin-top: 10px !important;
-    margin-left: 38px !important;
-    border: none;
-    height: 1.7rem !important;
-    border-radius: 2px;
-    font-size: 14px;
-    color: #c1ccdc;
-    font-weight: bold;
-}
-.buscador_cuentas label {
-    margin-top: 6px !important;
-}
-
-#buscar_cuentas {
-    cursor: pointer;
-}
-
-.botones_header {
-    position: absolute;
-    left: 1.2rem;
-    top: 1.2rem;
-}
-
-.collection {
-    margin: .5rem 0 0.1rem 0;
-}
-.modal input {
-    color: #c1ccdc !important;
-}
-.modal {
-    background-color: #26282f !important;
-    color: #c1ccdc;
 }

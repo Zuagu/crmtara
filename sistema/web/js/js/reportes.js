@@ -170,6 +170,7 @@ function reporte_gestiones_tabla() {
         hasta: $('#hasta_gestiones').val(),
         territorio: $('#id_ter_gestion').val()
     };
+    console.log(params);
     $.ajax({
         type: "POST",
         url: "ControllerReportesAzteca",

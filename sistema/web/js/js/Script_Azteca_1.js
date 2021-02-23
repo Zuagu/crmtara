@@ -262,15 +262,15 @@ $("#edit_num").click(function () {
         TELEFONO5: $("#TELEFONO5").val(),
         TELEFONO5_2: $("#TELEFONO5_2").val()
     };
-    
-    for (let tel in data_tel) {
-        if ( data_tel[tel] === "" || data_tel[tel] === "SIN INFORMACION") {
-        } else {
-            $("#" + tel).attr("readonly","readonly");
-        }
-    }
-    
-    
+
+//    for (let tel in data_tel) {
+//        if ( data_tel[tel] === "" || data_tel[tel] === "SIN INFORMACION") {
+//        } else {
+//            $("#" + tel).attr("readonly","readonly");
+//        }
+//    }
+
+
 //    console.log(data_tel);
 
     $('#edit_num').addClass('hide');
@@ -282,7 +282,7 @@ $("#edit_num").click(function () {
 
 });
 
-$("#editar_marcacion_directa input").click( function () {
+$("#editar_marcacion_directa input").click(function () {
     let atrib = $(this).attr("readonly");
     let id = $(this).attr("id");
     console.log(atrib);
@@ -290,11 +290,11 @@ $("#editar_marcacion_directa input").click( function () {
         var person = prompt("Favor de ingresar el codigo de autorizacion", "");
         if (person === "pjcruz20") {
             $("#" + id).removeAttr("readonly");
-        }else {
+        } else {
             alert("Clave de acceso no autorizado");
         }
     }
-}); 
+});
 
 
 $("#save_num").click(function () {
@@ -433,7 +433,7 @@ function select_datos_cuenta(_cuenta) {
             $("#tiempo_actual").val("00:00:00");
             $("#retraso_actual").val("00:00:00");
             $("#DIRECCION").val(`${datos_cuenta.DIRECCION_CTE}  #${datos_cuenta.NUM_EXT_CTE}`);
-            
+
             $("#datos_marcacion_directa1").empty();
             $("#datos_marcacion_directa2").empty();
             $("#datos_marcacion_directa1").append(`
@@ -448,8 +448,8 @@ function select_datos_cuenta(_cuenta) {
                 <label>Referencia 4</label>
                 <li class="collection-item">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
             `);
-            
-            
+
+
             $("#datos_marcacion_aval").empty();
             $("#datos_marcacion_aval").append(`<label>Aval Direcion: ${datos_cuenta.COLONIAAVAL} ${datos_cuenta.CALLEAVAL} ${datos_cuenta.NUMEXTAVAL}</label>
                 <li class="collection-item">${datos_cuenta.NOMBRE_AVAL}.</a></li>
@@ -463,6 +463,8 @@ function select_datos_cuenta(_cuenta) {
             if ($('#primera_llamada').val() === '00:00:00') {
 //                select_primera_llamada_gestor();
             }
+            $('#tbody_tabla_pagos').empty();
+            $('#tbody_tabla_convenios').empty();
 //            select_numero_llamadas_gestor();
 //            select_numero_cuentas_tocadas_gestor();
 //            select_numero_convenios_gestor();
@@ -745,7 +747,7 @@ function select_cuenta_siguiente(_id_usuario) {
                 $("#tiempo_actual").val("00:00:00");
                 $("#retraso_actual").val("00:00:00");
                 $("#DIRECCION").val(`${datos_cuenta.DIRECCION_CTE}  #${datos_cuenta.NUM_EXT_CTE}`);
-                
+
                 $("#datos_marcacion_directa1").empty();
                 $("#datos_marcacion_directa2").empty();
                 $("#datos_marcacion_directa1").append(`
@@ -760,8 +762,8 @@ function select_cuenta_siguiente(_id_usuario) {
                     <label>Referencia 4</label>
                     <li class="collection-item">${datos_cuenta.NOM_TEL4}.<a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4_2}"><i class="material-icons small">local_phone</i>${datos_cuenta.TELEFONO4_2}</a> <a class="right num_phone" href="zoiper://${datos_cuenta.TELEFONO4}"><i class="material-icons small">phone_iphone</i>${datos_cuenta.TELEFONO4}</a></li>
                 `);
-                
-                
+
+
                 $("#datos_marcacion_aval").empty();
                 $("#datos_marcacion_aval").append(`<label>Aval Direcion: ${datos_cuenta.COLONIAAVAL} ${datos_cuenta.CALLEAVAL} ${datos_cuenta.NUMEXTAVAL}</label>
                     <li class="collection-item">${datos_cuenta.NOMBRE_AVAL}.</a></li>
@@ -779,6 +781,8 @@ function select_cuenta_siguiente(_id_usuario) {
                 if ($('#primera_llamada').val() === '00:00:00') {
 //                    select_primera_llamada_gestor();
                 }
+                $('#tbody_tabla_pagos').empty();
+                $('#tbody_tabla_convenios').empty();
 //                select_numero_llamadas_gestor();
 //                select_numero_cuentas_tocadas_gestor();
 //                select_numero_convenios_gestor();

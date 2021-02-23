@@ -9,7 +9,7 @@
             || request.getParameter("password") == null || request.getParameter("password").isEmpty()) {
         response.sendRedirect("index.jsp");
     } else {
-        id_perfil = Integer.parseInt(request.getParameter("id_perfil"));
+//        id_perfil = Integer.parseInt(request.getParameter("id_perfil"));
         id_usuario = request.getParameter("id_usuario");
         password = request.getParameter("password");
         // llamadas a metodos

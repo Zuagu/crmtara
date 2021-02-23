@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/css/icons-material.css">
         <link rel="stylesheet" type="text/css" href="css/css/materialize.min.css">
         <!--<link rel="stylesheet" type="text/css" href="css/css/style.css">-->
-        <link rel="stylesheet" type="text/css" href="css/css/style_gestor.css">
+        <link rel="stylesheet" type="text/css" href="css/css/style_gestor_black.css">
         <style>
             .encabezados_csv span {
                 background-color: rgba(0, 0, 0, 0.13);
@@ -34,10 +34,10 @@
 
         <div class="row">
             <div class="col s12 m12 l12 center-align">
-                <div class="col s4 m4 l4 offset-l4 offset-m4 z-depth-2">
+                <div class="col s12 m6 l6 offset-l3 offset-m3 z-depth-2 grey darken-4">
                     <form method="POST" action="ControllerUploadFilesPagos" enctype="multipart/form-data">
                         <div class="col s12 m12 l12">
-                            <h6>Carga de Pagos</h6>
+                            <h6 class="grey-text">Carga de Pagos</h6>
                         </div>
                         <div class="file-field input-field">
 
