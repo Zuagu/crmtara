@@ -703,14 +703,51 @@ public class ModelGestor {
             StartConexion inicioConexion = new StartConexion();
             String sql = "UPDATE azteca_registro_agenda SET F_ACTIVE = '0' WHERE (`ID_REGISTRO` = '" + id_reg + "');";
             System.out.println(sql);
-            
+
             inicioConexion.st.executeUpdate(sql);
-            
+
 //            inicioConexion.rs.close();
             inicioConexion.st.close();
             inicioConexion.conn.close();
 
             return "{\"response\":\"Registro de agenda Actualializada\"}";
+        } catch (SQLException e) {
+            return "sql code" + e;
+        }
+    }
+
+    public static String select_lista_agendas(String fecha) {
+        try {
+            StartConexion inicioConexion = new StartConexion();
+            String sql = "select \n"
+                    + "	ID_REGISTRO, \n"
+                    + "    CLIENTE_UNICO, \n"
+                    + "    DESCRIPCION, \n"
+                    + "    FECHA_INSERT, \n"
+                    + "    FECHA_AGENDA, \n"
+                    + "    F_ACTIVE, \n"
+                    + "    nombre_usuario(ID_GESTOR) as GESTOR\n"
+                    + "from azteca_registro_agenda where date(FECHA_INSERT) = '"+fecha+"';";
+            System.out.println(sql);
+            inicioConexion.rs = inicioConexion.st.executeQuery(sql);
+            JSONArray listAgenda = new JSONArray();
+            // llamadas, cuentas, convenios, hora
+            while (inicioConexion.rs.next()) {
+                JSONObject agenda = new JSONObject();
+                agenda.put("ID_REGISTRO", inicioConexion.rs.getString("ID_REGISTRO"));
+                agenda.put("CLIENTE_UNICO", inicioConexion.rs.getString("CLIENTE_UNICO"));
+                agenda.put("DESCRIPCION", inicioConexion.rs.getString("DESCRIPCION"));
+                agenda.put("FECHA_INSERT", inicioConexion.rs.getString("FECHA_INSERT"));
+                agenda.put("FECHA_AGENDA", inicioConexion.rs.getString("FECHA_AGENDA"));
+                agenda.put("F_ACTIVE", inicioConexion.rs.getString("F_ACTIVE"));
+                agenda.put("GESTOR", inicioConexion.rs.getString("GESTOR"));
+                listAgenda.add(agenda);
+            }
+            inicioConexion.rs.close();
+            inicioConexion.st.close();
+            inicioConexion.conn.close();
+
+            return listAgenda.toString();
         } catch (SQLException e) {
             return "sql code" + e;
         }
