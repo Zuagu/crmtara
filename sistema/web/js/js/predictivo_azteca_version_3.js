@@ -218,7 +218,8 @@ $("#edit_num").click(function () {
     $('#edit_num').addClass('hide');
     $('#save_num').removeClass('hide');
 
-    $('#datos_marcacion_directa').addClass('hide');
+    $('#datos_marcacion_directa1').addClass('hide');
+    $('#datos_marcacion_directa2').addClass('hide');
     $('#editar_marcacion_directa').removeClass('hide');
 
 });
@@ -243,7 +244,8 @@ $("#save_num").click(function () {
     $('#save_num').addClass('hide');
     $('#edit_num').removeClass('hide');
 
-    $('#datos_marcacion_directa').removeClass('hide');
+    $('#datos_marcacion_directa1').removeClass('hide');
+    $('#datos_marcacion_directa2').removeClass('hide');
     $('#editar_marcacion_directa').addClass('hide');
     let cliente_unico = $("#CLIENTE_UNICO").val();
 

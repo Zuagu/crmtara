@@ -126,13 +126,13 @@
 
             <div class="col s6 m6 l6">
                 <div class="col s12 l12 m12 marcacion_directa grey lighten-1 z-depth-1">
-                    <ul id="datos_marcacion_aval" class="collection coll_1 datos_marcacion_directa">
+                    <ul id="datos_marcacion_aval" class="collection col s12 datos_marcacion_directa">
                         <!--<label>Aval Calle: Num: Colonia: Municipio: Estado: </label>-->
                         <label >Aval Calle:</label>
                         <li class="collection-item">Nombre del Aval</li>
                         <li class="collection-item">.<a class="right" href="zoiper://">Telefono 2</a><a class="right" href="zoiper://">Telefono 1</a></li>
                     </ul>
-                    <div id="edit_datos_marcacion_aval" class="col s9 m9 l9 margin_top_7px hide">
+                    <div id="edit_datos_marcacion_aval" class="col s12 m12 l12 margin_top_7px hide">
                         <div class="input-field col s6 m6 l6">
                             <input id="NOMBRE_AVAL" type="text" class="validate" placeholder=""  value="">
                             <label for="NOMBRE_AVAL">Contacto Aval</label>
@@ -151,19 +151,19 @@
                         </div>
                     </div>
 
-                    <ul class="collection coll_2 right-align">
+                    <ul class="collection col s12 right-align">
                         <a id="save_info_aval" class="btn-small hide blue">actualizar</a>
                         <a id="editar_info_aval" class="btn-small blue">editar</a>
                     </ul>
 
 
-                    <ul id="datos_marcacion_directa1" class="collection datos_marcacion_directa">
+                    <ul id="datos_marcacion_directa1" class="collection col s12 datos_marcacion_directa">
                         <label>Referencia 3</label>
                         <li class="collection-item">Nombre 3<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 4</label>
                         <li class="collection-item">Nombre 4<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                     </ul>
-                    <ul id="datos_marcacion_directa2" class="collection datos_marcacion_directa">
+                    <ul id="datos_marcacion_directa2" class="collection col s12 datos_marcacion_directa">
                         <label>Referencia 1</label>
                         <li class="collection-item">Nombre 1<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
                         <label>Referencia 2</label>
@@ -174,11 +174,11 @@
                         <div class="col s12 m12 l12">
                             <h6>Referencias</h6>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL1" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL1">Contacto 1</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="TELEFONO1" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO1">Tel. 1</label>
                         </div>
@@ -186,7 +186,7 @@
                             <input id="TELEFONO1_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO1_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL2" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL2">Contacto 2</label>
                         </div>
@@ -198,7 +198,7 @@
                             <input id="TELEFONO2_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO2_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL3" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL3">Contacto 3</label>
                         </div>
@@ -210,7 +210,7 @@
                             <input id="TELEFONO3_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO3_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6">
+                        <div class="input-field col s4 m4 l4">
                             <input id="NOM_TEL4" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL4">Contacto 4</label>
                         </div>
@@ -222,21 +222,21 @@
                             <input id="TELEFONO4_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO4_2">Tel. 2</label>
                         </div>
-                        <div class="input-field col s6 m6 l6 hide">
+                        <div class="input-field col s4 m4 l4 hide">
                             <input id="NOM_TEL5" type="text" class="validate" placeholder=""  value="">
                             <label for="NOM_TEL5">Contacto 5</label>
                         </div>
-                        <div class="input-field col s3 m3 l3 hide">
+                        <div class="input-field col s4 m4 l4 hide">
                             <input id="TELEFONO5" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO5">Tel. 1</label>
                         </div>
-                        <div class="input-field col s3 m3 l3 hide">
+                        <div class="input-field col s4 m4 l4 hide">
                             <input id="TELEFONO5_2" type="text" class="validate" placeholder=""  value="">
                             <label for="TELEFONO5_2">Tel. 2</label>
                         </div>
                     </div>
 
-                    <ul class="collection coll_2 right-align">
+                    <ul class="collection col s12 right-align">
                         <a id="edit_num" class="btn-small blue">editar</a>
                         <a id="save_num" class="btn-small blue hide">actualizar</a>
                     </ul>
@@ -366,7 +366,7 @@
                     </div>
 
                     <div class="col s12 m12 l12  div_gestor_gestion">
-                        <textarea id="gestion" readonly="" class="materialize-textarea limpiar_texto" data-length="1000" placeholder="Gestion">${telefono} </textarea>
+                        <textarea id="gestion" class="materialize-textarea limpiar_texto" data-length="1000" placeholder="Gestion">${telefono} </textarea>
                     </div>
                     <ul class="collection col s12 right-align">
                         <a id="guardar_gestion" class="btn-flat blue">Save</a>
