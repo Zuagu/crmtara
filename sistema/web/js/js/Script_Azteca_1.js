@@ -621,11 +621,9 @@ function select_pagos_cuenta(_cuenta, _div) {
                     $("#" + _div).append(`<tr>
                         <td>${item.ID_PAGO}</td>
                         <td>${item.CLIENTE_UNICO}</td>
-                        <td>${item.ZONA}</td>
-                        <td>${item.GERENTE}</td>
-                        <td>${item.FECHA_GESTION}</td>
-                        <td>${item.RECUPERACION_CAPITAL}</td>
-                        <td>${item.RECUPERACION_MORATORIOS}</td>
+                        <td>${item.DIA}</td>
+                        <td>${ parseFloat(item.RECUPERACION_CAPITAL) + parseFloat(item.RECUPERACION_MORATORIOS) }</td>
+                        <td>${ parseFloat(item.SALDO_ACTUAL) }</td>
                         </tr>`
                             );
                 }
@@ -735,7 +733,11 @@ function select_cuenta_siguiente(_id_usuario) {
                 $("#MORATORIOS").val('$ ' + datos_cuenta.MORATORIOS);
                 $("#SALDO_TOTAL").val('$ ' + datos_cuenta.SALDO_TOTAL);
                 $("#IMP_ULTIMO_PAGO").val('$ ' + datos_cuenta.IMP_ULTIMO_PAGO);
-                $("#FECHA_ULTIMO_PAGO").val(datos_cuenta.FECHA_ULTIMO_PAGO.split(' ')[0]);
+                try {
+                    $("#FECHA_ULTIMO_PAGO").val(datos_cuenta.FECHA_ULTIMO_PAGO.split(' ')[0]);
+                } catch(err) {
+                    console.log(err);
+                }
 
                 $("#estatus").empty();
                 $("#estatus").append('<option value="" selected>Selecciona Estatus</option>' + datos_cuenta["ESTATUS_POSIBLES_TXT"]);
@@ -1162,11 +1164,7 @@ function select_cuentas_de_estaus(_id_usuario, _id_equipo, _id_status, _div) {
 }
 
 $("#tab_saldos").click(function () {
-//    select_saldos_gestores(id_usuario, 'tbody_tabla_saldos_status');
-    select_equipos_usuario(id_usuario, 'tbody_tabla_equipos_usuario');
-    $("#tabla_equipos_usuario").removeClass("hide");
-    $("#tabla_saldos_status").addClass("hide");
-    $("#tabla_cuentas_status").addClass("hide");
+    select_pagos_recurrentes("tb_cont_pagos_recurrentes");
 });
 $("#tbody_tabla_equipos_usuario").delegate('.equipo_usuario', 'dblclick', function () {
     select_saldos_gestores(id_usuario, $(this).closest("tr").attr("id"), 'tbody_tabla_saldos_status');
@@ -1601,6 +1599,42 @@ function descartar_agenda_gestor(_id_registro) {
         dataType: "json",
         success: function (result) {
             console.log(result);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+
+// Funcion de seleccionar los proximos pagos recurrentes
+function select_pagos_recurrentes(_div) {
+
+    var params = {
+        action: "select_pagos_recurrentes"
+    };
+//    console.log(params);
+    $.ajax({
+        type: "POST",
+        url: "ControllerDataCuentaAzteca",
+        data: params,
+        dataType: "json",
+        success: function (pagos) {
+            $("#" + _div).empty();
+//            console.log(pagos);
+            if (pagos.length === 0) {
+                $("#" + _div).append("Esta cuenta no tiene ningun pago");
+            } else {
+                for (var item of pagos) {
+                    $("#" + _div).append(`<tr class='blue darken-4'>
+                        <td>${item.ID_PAGO}</td>
+                        <td>${item.CLIENTE_UNICO}</td>
+                        <td>${item.DIA}</td>
+                        <td>${ parseFloat(item.RECUPERACION_CAPITAL) + parseFloat(item.RECUPERACION_MORATORIOS) }</td>
+                        <td>${ parseFloat(item.SALDO_ACTUAL) }</td>
+                        </tr>`);
+                }
+            }
         },
         error: function (error) {
             console.log(error);

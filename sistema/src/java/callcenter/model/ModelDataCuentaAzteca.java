@@ -717,7 +717,43 @@ public class ModelDataCuentaAzteca {
     public static String select_pagos_cuenta(String cuenta) {
         try {
             StartConexion ic = new StartConexion();
-            String sql = "SELECT * FROM azteca_pagos where CLIENTE_UNICO = '" + cuenta + "';";
+            String sql = "SELECT * FROM azteca_pagos where CLIENTE_UNICO = '" + cuenta + "' order by DIA desc;";
+//            ID_PAGO, ANIO, SEMANA, DIA, PAIS, CANAL, SUCURSAL, FOLIO, RECUPERACION_CAPITAL, RECUPERACION_MORATORIOS, SALDO_ACTUAL, MORATORIO, FECHA_GESTION, CARGO_AUTOMATICO, CLIENTE_UNICO, ZONA, GERENTE, ID_GESTOR
+            ic.rs = ic.st.executeQuery(sql);
+            JSONArray pagos = new JSONArray();
+            while (ic.rs.next()) {
+                JSONObject pago = new JSONObject();
+                pago.put("ID_PAGO", ic.rs.getString("ID_PAGO"));
+                pago.put("ANIO", ic.rs.getString("ANIO"));
+                pago.put("SEMANA", ic.rs.getString("SEMANA"));
+                pago.put("DIA", ic.rs.getString("DIA"));
+                pago.put("SUCURSAL", ic.rs.getString("SUCURSAL"));
+                pago.put("CANAL", ic.rs.getString("CANAL"));
+                pago.put("RECUPERACION_CAPITAL", ic.rs.getString("RECUPERACION_CAPITAL"));
+                pago.put("RECUPERACION_MORATORIOS", ic.rs.getString("RECUPERACION_MORATORIOS"));
+                pago.put("SALDO_ACTUAL", ic.rs.getString("SALDO_ACTUAL"));
+                pago.put("MORATORIO", ic.rs.getString("MORATORIO"));
+                pago.put("FECHA_GESTION", ic.rs.getString("FECHA_GESTION"));
+                pago.put("CLIENTE_UNICO", ic.rs.getString("CLIENTE_UNICO"));
+                pago.put("ZONA", ic.rs.getString("ZONA"));
+                pago.put("GERENTE", ic.rs.getString("GERENTE"));
+                pago.put("ID_GESTOR", ic.rs.getString("ID_GESTOR"));
+                pagos.add(pago);
+            }
+            ic.rs.close();
+            ic.st.close();
+            ic.conn.close();
+
+            return pagos.toString();
+        } catch (SQLException e) {
+            return "SQL: Error al traer los pagos azteca Code Error: " + e;
+        }
+    }
+    
+    public static String select_pagos_recurrentes() {
+        try {
+            StartConexion ic = new StartConexion();
+            String sql = "SELECT * FROM azteca_pagos WHERE DIA = (CURDATE() - INTERVAL 7 DAY) ORDER BY DIA ASC;";
 //            ID_PAGO, ANIO, SEMANA, DIA, PAIS, CANAL, SUCURSAL, FOLIO, RECUPERACION_CAPITAL, RECUPERACION_MORATORIOS, SALDO_ACTUAL, MORATORIO, FECHA_GESTION, CARGO_AUTOMATICO, CLIENTE_UNICO, ZONA, GERENTE, ID_GESTOR
             ic.rs = ic.st.executeQuery(sql);
             JSONArray pagos = new JSONArray();

@@ -24,7 +24,7 @@
         </style>
     </head>
 
-    <body style="font-size: 12px">
+    <body>
         <jsp:include page="header_3.jsp"/>
 
         <div class="row">
@@ -251,7 +251,7 @@
                             <li class="tab col s2"><a id="tab_convenios" class="gestor_tab tooltipped" data-position="bottom" data-tooltip="Convenios" href="#div_convenios">convenios</a></li>
                             <li class="tab col s2"><a id="tab_agendas" class="gestor_tab tooltipped" data-position="bottom" data-tooltip="Agenda" href="#div_agendas">agenda</a></li>
                             <li class="tab col s2"><a id="tab_visitas" class="gestor_tab tooltipped" data-position="bottom" data-tooltip="Visitas" href="#div_visitas">visitas</a></li>
-                            <li class="tab col s2"><a id="tab_saldos" class="gestor_tab tooltipped"data-position="bottom" data-tooltip="Saldos" href="#div_saldos">saldo</a></li>
+                            <li class="tab col s2"><a id="tab_saldos" class="gestor_tab tooltipped"data-position="bottom" data-tooltip="Saldos" href="#div_saldos">PAG RECURRENTES</a></li>
                         </ul>
                     </div>
                 </div>
@@ -280,11 +280,9 @@
                             <tr class="text-white">
                                 <td><b>FOLIO</b></td>
                                 <td><b>CLIENTE UNICO</b></td>
-                                <td><b>ZONA</b></td>
-                                <td><b>GERENTE</b></td>
-                                <td><b>FECHA GESTION</b></td>
-                                <td><b>RECUPERACION CAPITAL</b></td>
-                                <td><b>RECUPERACION MORATORIOS</b></td>
+                                <td><b>FECHA PAGO</b></td>
+                                <td><b>RECUPERACION</b></td>
+                                <td><b>RESTANTE</b></td>
                             </tr>
                         </thead>
                         <tbody id="tbody_tabla_pagos">
@@ -322,9 +320,9 @@
 
                     <div id="tabla_agendas" class="col s12 m12 l12"></div>
                 </div>
-                <div id="div_visitas" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
-
-                </div>
+                
+                <div id="div_visitas" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1"></div>
+                
                 <div id="div_convenios" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
                     <table class="highlight" id="tabla_convenios">
                         <thead class="blue">
@@ -346,7 +344,20 @@
                     </table>
                 </div>
                 <div id="div_saldos" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
-
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>FOLIO</th>
+                                <th>CLIENTE UNICO</th>
+                                <th>FECHA PAGO</th>
+                                <th>RECUPERACION</th>
+                                <th>RESTANTE</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_cont_pagos_recurrentes">
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

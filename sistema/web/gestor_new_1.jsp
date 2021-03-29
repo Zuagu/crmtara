@@ -24,7 +24,7 @@
         </style>
     </head>
 
-    <body class="grey lighten-3" style="font-size: 12px">
+    <body class="grey lighten-3">
         <jsp:include page="header.jsp"/>
         <div class="row gestor_font" id="contenido">
             <div class="container-fluid">
