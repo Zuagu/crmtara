@@ -15,7 +15,7 @@
 
 <ul id="dropdown1" class="dropdown-content">
     <li><a>Informacion Personal</a></li>
-    <li><a>Cambiar Password</a></li>
+    <li><a href="cambiar-password.jsp">Cambiar Password</a></li>
     <li class="divider"></li>
     <li><a href="index.jsp" id="cerrar">Cerrar Sesion</a></li>
 </ul>

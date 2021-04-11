@@ -381,10 +381,18 @@ function buscar_cuentas_gestor(_busqueda, _id_puesto, _div) {
     });
 }
 
+function limpiar_datos_pantalla() {
+    $("#info_gestor input").val("");
+    $(".num_phone").empty();
+    $("#tbody_tabla_pagos").empty();
+    $("#tbody_tabla_convenios").empty();
+}
+
 $("#buscador_cuentas_gestor").keyup(function (e) {
 
     if (e.keyCode === 13) {
         if ($("#buscador_cuentas_gestor").val().length > 5) {
+            limpiar_datos_pantalla();
             select_datos_cuenta($("#buscador_cuentas_gestor").val());
         } else {
             $("#modal_alerta").modal("open");
@@ -847,10 +855,10 @@ function insertar_gestion(myObj) {
 }
 
 $("#guardar_gestion").click(function () {
-    console.log($("#codigo_llamada").val());
-    console.log($("#gestion").val());
-    console.log($("#numero_marcado_deudor").val());
-    console.log($("#estatus").val());
+//    console.log($("#codigo_llamada").val());
+//    console.log($("#gestion").val());
+//    console.log($("#numero_marcado_deudor").val());
+//    console.log($("#estatus").val());
 
     if ($("#codigo_llamada").val() !== "0" && $("#gestion").val() !== "" && $("#numero_marcado_deudor").val() !== "" && $("#estatus").val() !== "") {
         var myObjGestion = {
@@ -943,6 +951,8 @@ function insertar_convenio(_myObjConvenio, _myObjGestion) {
             $("#alerta_convenio").append(`${respuesta.resultado} ${respuesta.mensaje}`);
             $("#importe_convenio").val("");
             $("#fecha_convenio").val("");
+            
+            
 
             if (respuesta.resultado !== "NO PERMITIDO" && respuesta.resultado !== "VERIFICA FECHA" && respuesta.resultado !== "VERIFIQUE IMPORTE Y LA FECHA DEL CONVENIO") {
                 insertar_gestion(_myObjGestion);
@@ -951,6 +961,10 @@ function insertar_convenio(_myObjConvenio, _myObjGestion) {
                 $("#codigo_llamada").append(options_estatus_llamadas);
                 $('select').formSelect();
             }
+            let opSemanas = $("#SEMANAS_PAGO").html();
+            $("#SEMANAS_PAGO").empty();
+            $("#SEMANAS_PAGO").append(opSemanas);
+            $('select').formSelect();
         },
         error: function (error) {
             console.log(error);
@@ -1019,6 +1033,9 @@ $("#insert_convenio").click(function () {
         _F_PREDICTIVO: 0,
         _ID_EQUIPO: $('#ID_EQUIPO').val()
     };
+    
+    let semanas_pago = $("#SEMANAS_PAGO").val() || 1; 
+    
     var myObjConvenio = {
         CONVENIO: $("#importe_convenio").val(),
         FECHA: $("#fecha_convenio").val(),
@@ -1033,6 +1050,7 @@ $("#insert_convenio").click(function () {
         CANAL: $('#CANAL').val(),
         ATRASO_MAXIMO: $('#ATRASO_MAXIMO').val(),
         ID_EQUIPO: $('#ID_EQUIPO').val(),
+        SEMANAS_PAGO: $('#SEMANAS_PAGO').val(),
         PASSwORD: $('#password_convenio').val()
     };
     var validacion = 0;
@@ -1606,6 +1624,11 @@ function descartar_agenda_gestor(_id_registro) {
     });
 }
 
+$("#tb_cont_pagos_recurrentes").on('click', '.row_pagos_recurentes', function () {
+    limpiar_datos_pantalla();
+    let _cuenta = $(".cliente_unico_recurente", this).text() ;
+    select_datos_cuenta(_cuenta);
+});
 
 // Funcion de seleccionar los proximos pagos recurrentes
 function select_pagos_recurrentes(_div) {
@@ -1626,12 +1649,14 @@ function select_pagos_recurrentes(_div) {
                 $("#" + _div).append("Esta cuenta no tiene ningun pago");
             } else {
                 for (var item of pagos) {
-                    $("#" + _div).append(`<tr class='blue darken-4'>
+                    $("#" + _div).append(`<tr class='${item.COLOR} row_pagos_recurentes'>
                         <td>${item.ID_PAGO}</td>
-                        <td>${item.CLIENTE_UNICO}</td>
+                        <td>${item.TIPO}</td>
+                        <td class="cliente_unico_recurente teal darken-4">${item.CLIENTE_UNICO}</td>
                         <td>${item.DIA}</td>
                         <td>${ parseFloat(item.RECUPERACION_CAPITAL) + parseFloat(item.RECUPERACION_MORATORIOS) }</td>
                         <td>${ parseFloat(item.SALDO_ACTUAL) }</td>
+                        <td><a href="zoiper://${ item.TELEFONO1 }">${ item.TELEFONO1 }</a></td>
                         </tr>`);
                 }
             }

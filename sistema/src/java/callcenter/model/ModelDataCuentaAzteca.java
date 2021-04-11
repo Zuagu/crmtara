@@ -21,7 +21,7 @@ import org.json.simple.parser.JSONParser;
  * @author Emmanuel Medina
  */
 public class ModelDataCuentaAzteca {
-    
+
     public static String datosCuenta(String cuenta) {
         try {
             StartConexion ic = new StartConexion();
@@ -130,11 +130,11 @@ public class ModelDataCuentaAzteca {
 //            System.out.println(objCuenta.toString());
             return objCuenta.toString();
         } catch (SQLException e) {
-            
+
             System.out.println(e);
             return "SQL: Error al traer los datos de la cuenta azteca Code Error: " + e;
         }
-        
+
     }
 
     public static String guardarGestion(String objGestion) {
@@ -456,6 +456,8 @@ public class ModelDataCuentaAzteca {
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(objConvenio);
 
+            System.out.println(objConvenio);
+
             Object _CONVENIO = jsonObject.get("CONVENIO");
             Object _FECHA = jsonObject.get("FECHA");
             Object _ID_USUARIO = jsonObject.get("ID_USUARIO");
@@ -470,9 +472,10 @@ public class ModelDataCuentaAzteca {
             Object _ATRASO_MAXIMO = jsonObject.get("ATRASO_MAXIMO");
             Object _ID_EQUIPO = jsonObject.get("ID_EQUIPO");
             Object _PASSwORD = jsonObject.get("PASSwORD");
+            Object _SEMANAS_PAGO = jsonObject.get("SEMANAS_PAGO");
 
             StartConexion ic = new StartConexion();
-            String sql = "CALL azteca_insert_convenio( " + _CONVENIO + ", '" + _FECHA + "', " + _ID_USUARIO + ", '" + _CUENTA + "', '" + _TERRITORIO + "', '" + _CANAL + "' , " + _ATRASO_MAXIMO + ", " + _ID_EQUIPO + ", '" + _PASSwORD + "', '" + _GERENCIA + "', '" + _GERENTE + "', '" + _ID_ESTATUS_LLAMADA + "', '" + _TIPO_CONVENIO + "', '" + _NOMBRE + "');";
+            String sql = "CALL azteca_insert_convenio( " + _CONVENIO + ", '" + _FECHA + "', " + _ID_USUARIO + ", '" + _CUENTA + "', '" + _TERRITORIO + "', '" + _CANAL + "' , " + _ATRASO_MAXIMO + ", " + _ID_EQUIPO + ", '" + _PASSwORD + "', '" + _GERENCIA + "', '" + _GERENTE + "', '" + _ID_ESTATUS_LLAMADA + "', '" + _TIPO_CONVENIO + "', '" + _NOMBRE + "', '" + _SEMANAS_PAGO + "');";
             System.out.println(sql);
             ic.rs = ic.st.executeQuery(sql);
             // response
@@ -749,31 +752,31 @@ public class ModelDataCuentaAzteca {
             return "SQL: Error al traer los pagos azteca Code Error: " + e;
         }
     }
-    
+
     public static String select_pagos_recurrentes() {
         try {
             StartConexion ic = new StartConexion();
-            String sql = "SELECT * FROM azteca_pagos WHERE DIA = (CURDATE() - INTERVAL 7 DAY) ORDER BY DIA ASC;";
+            String sql = "SELECT p.ID_PAGO, p.CLIENTE_UNICO, p.DIA, p.RECUPERACION_CAPITAL,\n"
+                    + "p.RECUPERACION_MORATORIOS, p.SALDO_ACTUAL, b.TELEFONO1, 'RECURRENTE' AS TIPO, 'blue darken-4' AS COLOR\n"
+                    + "FROM azteca_pagos p left join azteca_base_genenral_original b on p.CLIENTE_UNICO = b.CLIENTE_UNICO\n"
+                    + "WHERE DIA = (CURDATE() - INTERVAL 7 DAY) \n"
+                    + "union all\n"
+                    + "SELECT ID_CONVENIO, CUENTA, FECHA, CONVENIO, '0.00', '0.00',NOMBRE, 'CONVENIO' AS TIPO, 'cyan darken-4' AS COLOR\n"
+                    + "FROM azteca_convenios where FECHA = CURDATE() ORDER BY DIA ASC;";
 //            ID_PAGO, ANIO, SEMANA, DIA, PAIS, CANAL, SUCURSAL, FOLIO, RECUPERACION_CAPITAL, RECUPERACION_MORATORIOS, SALDO_ACTUAL, MORATORIO, FECHA_GESTION, CARGO_AUTOMATICO, CLIENTE_UNICO, ZONA, GERENTE, ID_GESTOR
             ic.rs = ic.st.executeQuery(sql);
             JSONArray pagos = new JSONArray();
             while (ic.rs.next()) {
                 JSONObject pago = new JSONObject();
                 pago.put("ID_PAGO", ic.rs.getString("ID_PAGO"));
-                pago.put("ANIO", ic.rs.getString("ANIO"));
-                pago.put("SEMANA", ic.rs.getString("SEMANA"));
+                pago.put("CLIENTE_UNICO", ic.rs.getString("CLIENTE_UNICO"));
                 pago.put("DIA", ic.rs.getString("DIA"));
-                pago.put("SUCURSAL", ic.rs.getString("SUCURSAL"));
-                pago.put("CANAL", ic.rs.getString("CANAL"));
                 pago.put("RECUPERACION_CAPITAL", ic.rs.getString("RECUPERACION_CAPITAL"));
                 pago.put("RECUPERACION_MORATORIOS", ic.rs.getString("RECUPERACION_MORATORIOS"));
                 pago.put("SALDO_ACTUAL", ic.rs.getString("SALDO_ACTUAL"));
-                pago.put("MORATORIO", ic.rs.getString("MORATORIO"));
-                pago.put("FECHA_GESTION", ic.rs.getString("FECHA_GESTION"));
-                pago.put("CLIENTE_UNICO", ic.rs.getString("CLIENTE_UNICO"));
-                pago.put("ZONA", ic.rs.getString("ZONA"));
-                pago.put("GERENTE", ic.rs.getString("GERENTE"));
-                pago.put("ID_GESTOR", ic.rs.getString("ID_GESTOR"));
+                pago.put("TELEFONO1", ic.rs.getString("TELEFONO1"));
+                pago.put("TIPO", ic.rs.getString("TIPO"));
+                pago.put("COLOR", ic.rs.getString("COLOR"));
                 pagos.add(pago);
             }
             ic.rs.close();

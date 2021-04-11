@@ -21,6 +21,9 @@
             .slider .slides li img {
                 background-size: contain;
             }
+            .modal{
+                overflow: visible!important; 
+            }
         </style>
     </head>
 
@@ -154,7 +157,7 @@
                         <a id="save_info_aval" class="btn-small hide blue">actualizar</a>
                         <a id="editar_info_aval" class="btn-small blue">editar</a>
                     </ul>
-                    
+
                     <ul id="datos_marcacion_directa1" class="collection datos_marcacion_directa col s12">
                         <label>Referencia 3</label>
                         <li class="collection-item">Nombre 3<a class="right" href="zoiper://"></a> <a class="right" href="zoiper://"></a></li>
@@ -320,9 +323,9 @@
 
                     <div id="tabla_agendas" class="col s12 m12 l12"></div>
                 </div>
-                
+
                 <div id="div_visitas" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1"></div>
-                
+
                 <div id="div_convenios" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
                     <table class="highlight" id="tabla_convenios">
                         <thead class="blue">
@@ -348,14 +351,16 @@
                         <thead>
                             <tr>
                                 <th>FOLIO</th>
+                                <th>TIPO</th>
                                 <th>CLIENTE UNICO</th>
                                 <th>FECHA PAGO</th>
                                 <th>RECUPERACION</th>
                                 <th>RESTANTE</th>
+                                <th>TELEFONO</th>
                             </tr>
                         </thead>
                         <tbody id="tb_cont_pagos_recurrentes">
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -380,7 +385,7 @@
                     <ul class="collection col s12 right-align">
                         <a id="guardar_gestion" class="btn-flat blue">Save</a>
                         <a id="cuenta_siguiente" class="btn-flat blue">Nex</a>
-                        
+
                     </ul>
 
                 </div>
@@ -689,7 +694,7 @@
                 <div class="col s12 m12 l12">
                     <div class="slider">
                         <ul id="cont_de_imagenes" class="slides">
-                            
+
                             <li>
                                 <!--<img src="image/banco_30.png">  random image -->
                                 <div class="caption center-align">
