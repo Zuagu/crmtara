@@ -325,3 +325,7 @@ table {
     background-color: #26282f !important;
     color: #c1ccdc;
 }
+
+.div_gestor_contenido th, .div_gestor_contenido td {
+    font-size: 13px;
+}

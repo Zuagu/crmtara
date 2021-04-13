@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Gestor Azteca</title>
-        <link rel="shortcut icon" href="image/logoInco.fw.png">
+        <link rel="shortcut icon" href="image/iconG.png">
         <link rel="stylesheet" type="text/css" href="css/css/icons-material.css">
         <link rel="stylesheet" type="text/css" href="css/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="css/css/style_gestor_3.css">
@@ -41,85 +41,90 @@
             <div id="info_gestor" class=" col s6 m6 l6 div_input_gestor_info margin_top_7px">
                 <div class=" col s12 m12 l12 z-depth-1  grey lighten-1">
                     <div class=" col s12 m12 l12">
-                        <div class="col s5 m5 l5 offset-l1 offset-m1">
-                            <h6 class="white-text">INFORMACION DEL CLIENTE</h6>
-                        </div>
-                        <div class="input-field col s6 m6 l6 buscador_cuentas">
+                        <!--                        <div class="col s5 m5 l5 offset-l1 offset-m1">
+                                                    <h6 class="white-text">INFORMACION DEL CLIENTE</h6>
+                                                </div>-->
+                        <div class="input-field col s8 m8 l8 buscador_cuentas offset-l4 offset-m4">
                             <i id="buscar_cuentas" class="material-icons prefix white-text">search</i>
                             <input id="buscador_cuentas_gestor" class="buscador search_cuentas center-align " type="text" placeholder="Buscar">
-                            <label for="buscador_cuentas_gestor" class="white-text">First Name</label>
                         </div>
                     </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="CLIENTE_UNICO" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label  for="CLIENTE_UNICO">CUENTA</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="NOMBRE_CTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="NOMBRE_CTE">TITULAR</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="GERENCIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="GERENCIA">GERENCIA</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="CAMPANIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="CAMPANIA">PRODUCTO</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="GERENTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="GERENTE">GERENTE</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="doce" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="">SUBPRODUCTO</label>
-                    </div>
-                    <div class="input-field col s6 m6 l6">
-                        <input id="ETAPA" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="ETAPA">TIPO</label>
-                    </div>
-                    <div class=" input-field col s12 m12 l12">
-                        <input id="Direccion" type="text" class="validate" placeholder="" readonly="readonly" value="">
-                        <label for="Direccion">DIRECCION</label>
-                    </div>
+                    <fieldset>
+                        <legend class="grey-text">INFORMACION DEL CLIENTE</legend>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="CLIENTE_UNICO" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label  for="CLIENTE_UNICO">CUENTA</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="NOMBRE_CTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="NOMBRE_CTE">TITULAR</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="GERENCIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="GERENCIA">GERENCIA</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="CAMPANIA" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="CAMPANIA">PRODUCTO</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="GERENTE" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="GERENTE">GERENTE</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="doce" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="">SUBPRODUCTO</label>
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <input id="ETAPA" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="ETAPA">TIPO</label>
+                        </div>
+                        <div class=" input-field col s12 m12 l12">
+                            <input id="Direccion" type="text" class="validate" placeholder="" readonly="readonly" value="">
+                            <label for="Direccion">DIRECCION</label>
+                        </div>
+                    </fieldset>
 
 
-                    <div class="col s12 m12 l12">
-                        <h6 class="white-text">INFORMACION ECONOMICA</h6>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="SALDO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="SALDO">CAPITAL</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="MORATORIOS" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="MORATORIOS">MORATORIO</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="ATRASO_MAXIMO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="ATRASO_MAXIMO">SEMANA</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="IMP_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="IMP_ULTIMO_PAGO">ULT. PAGO</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="DIA_DE_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="DIA_DE_PAGO">DIA DE PAGO</label>
-                    </div>
+                    <!--                    <div class="col s12 m12 l12">
+                                            <h6 class="white-text">INFORMACION ECONOMICA</h6>
+                                        </div>-->
+                    <fieldset>
+                        <legend class="grey-text">INFORMACION ECONOMICA</legend>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="SALDO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="SALDO">CAPITAL</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="MORATORIOS" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="MORATORIOS">MORATORIO</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="ATRASO_MAXIMO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="ATRASO_MAXIMO">SEMANA</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="IMP_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="IMP_ULTIMO_PAGO">ULT. PAGO</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="DIA_DE_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="DIA_DE_PAGO">DIA DE PAGO</label>
+                        </div>
 
-                    <div class="input-field col s4 m4 l4">
-                        <input id="FECHA_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="FECHA_ULTIMO_PAGO">FECHA ULTIMO PAGO</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="CRM" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="CRM">ESTATUS</label>
-                    </div>
-                    <div class="input-field col s4 m4 l4">
-                        <input id="SALDO_TOTAL" type="text" class="validate" placeholder="" readonly="readonly"  value="">
-                        <label for="SALDO_TOTAL">TOTAL</label>
-                    </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="FECHA_ULTIMO_PAGO" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="FECHA_ULTIMO_PAGO">FECHA ULTIMO PAGO</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="CRM" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="CRM">ESTATUS</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="SALDO_TOTAL" type="text" class="validate" placeholder="" readonly="readonly"  value="">
+                            <label for="SALDO_TOTAL">TOTAL</label>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
 
@@ -348,7 +353,22 @@
                     </table>
                 </div>
                 <div id="div_saldos" class="col s12 z-depth-1 div_gestor_contenido center center-align grey lighten-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TIPO</th>
+                                <th>CLIENTE UNICO</th>
+                                <th>FECHA PAGO</th>
+                                <th>RECUPERACION</th>
+                                <th>RESTANTE</th>
+                                <th>TELEFONO</th>
+                                <th>GESTOR</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_cont_pagos_recurrentes">
 
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -371,7 +391,7 @@
                     <ul class="collection col s12 right-align">
                         <a id="guardar_gestion" class="btn-flat blue">Save</a>
                         <a id="cuenta_siguiente" class="btn-flat blue">Nex</a>
-                        
+
                     </ul>
 
                 </div>
@@ -428,7 +448,7 @@
                     <label for="fecha_convenio">Fecha del convenio</label>
                 </div>
                 <div class="input-field col s12 m4 l4 offset-m2 offset-l2 hide">
-                    <input id="password_convenio" type="password" class="" value="123" placeholder="Ingresa Password">
+                    <input id="password_convenio" type="password" value="123" placeholder="Ingresa Password">
                 </div>
                 <div class="input-field col s12 m4 l4 offset-m1 offset-l1">
                     <select id="TIPO_CONVENIO">
@@ -499,7 +519,7 @@
                     </select>
                 </div>
                 <div class="input-field col s12 m4 l4 offset-m2 offset-l2">
-                    <input id="importe_pago_recurrente" type="text" class="" value="123" placeholder="Importe Pago Recurrente">
+                    <input id="importe_pago_recurrente" type="text" placeholder="Importe Pago Recurrente">
                     <label for="importe_pago_recurrente">Importe Pago Recurrente</label>
                 </div>
                 <div class="col s12 center">

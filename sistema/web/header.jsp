@@ -25,7 +25,7 @@
 <nav class="header_nav blue darken-1">
     <div class="nav-wrapper icon_nav">
         <ul>
-            <li href="#!" class=""><img src="image/logoInco.fw.png" alt="image/logoInco.fw.png" class="img_log"></li> 
+            <li href="#!" class=""><img src="image/iconG.png" alt="image/iconG.png" class="img_log"></li> 
         </ul> 
 
         <div class="contenedor_buscar white">

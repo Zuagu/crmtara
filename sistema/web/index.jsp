@@ -9,9 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+        <link rel="shortcut icon" href="image/iconG.png">
         <title>Sistema Gestor</title>
-
         <link rel="stylesheet" type="text/css" href="css/css/login_tara.css">
     </head>
     <body>

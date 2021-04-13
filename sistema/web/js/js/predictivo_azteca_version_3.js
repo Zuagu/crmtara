@@ -823,7 +823,7 @@ $("#datos_marcacion_directa2").delegate(".num_phone", "click", function () {
 });
 // Insert Convenio 
 function insertar_convenio(_myObjConvenio, _myObjGestion) {
-//    console.log(_myObjConvenio);
+    console.log(_myObjConvenio);
 //    console.log(_myObjGestion);
     var params = {
         action: "insertar_convenio",
@@ -917,6 +917,10 @@ $("#insert_convenio").click(function () {
         _F_PREDICTIVO: 0,
         _ID_EQUIPO: $('#ID_EQUIPO').val()
     };
+    
+    let semanas_pago = $("#SEMANAS_PAGO").val() || 1; 
+    let importe_pago_recurrente = $("#importe_pago_recurrente").val() || 0;
+    
     var myObjConvenio = {
         CONVENIO: $("#importe_convenio").val(),
         FECHA: $("#fecha_convenio").val(),
@@ -931,7 +935,9 @@ $("#insert_convenio").click(function () {
         CANAL: $('#CANAL').val(),
         ATRASO_MAXIMO: $('#ATRASO_MAXIMO').val(),
         ID_EQUIPO: $('#ID_EQUIPO').val(),
-        PASSwORD: $('#password_convenio').val()
+        SEMANAS_PAGO: semanas_pago,
+        IMPORTE_RECURRENTE: importe_pago_recurrente,
+        PASSwORD: '123'
     };
     var validacion = 0;
     for (var obj in myObjConvenio) {

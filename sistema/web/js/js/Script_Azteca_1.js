@@ -1655,13 +1655,13 @@ function select_pagos_recurrentes(_div) {
             } else {
                 for (var item of pagos) {
                     $("#" + _div).append(`<tr class='${item.COLOR} row_pagos_recurentes'>
-                        <td>${item.ID_PAGO}</td>
                         <td>${item.TIPO}</td>
                         <td class="cliente_unico_recurente teal darken-4">${item.CLIENTE_UNICO}</td>
                         <td>${item.DIA}</td>
                         <td>${ parseFloat(item.RECUPERACION_CAPITAL) + parseFloat(item.RECUPERACION_MORATORIOS) }</td>
                         <td>${ parseFloat(item.SALDO_ACTUAL) }</td>
                         <td><a href="zoiper://${ item.TELEFONO1 }">${ item.TELEFONO1 }</a></td>
+                        <td>${ parseFloat(item.USUARIO) }</td>
                         </tr>`);
                 }
             }

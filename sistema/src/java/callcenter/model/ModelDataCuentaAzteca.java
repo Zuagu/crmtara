@@ -758,11 +758,11 @@ public class ModelDataCuentaAzteca {
         try {
             StartConexion ic = new StartConexion();
             String sql = "SELECT p.ID_PAGO, p.CLIENTE_UNICO, p.DIA, p.RECUPERACION_CAPITAL,\n"
-                    + "p.RECUPERACION_MORATORIOS, p.SALDO_ACTUAL, b.TELEFONO1, 'RECURRENTE' AS TIPO, 'blue darken-4' AS COLOR\n"
+                    + "p.RECUPERACION_MORATORIOS, p.SALDO_ACTUAL, b.TELEFONO1, 'RECURRENTE' AS TIPO, 'blue darken-4' AS COLOR, '' as USUARIO \n"
                     + "FROM azteca_pagos p left join azteca_base_genenral_original b on p.CLIENTE_UNICO = b.CLIENTE_UNICO\n"
                     + "WHERE DIA = (CURDATE() - INTERVAL 7 DAY) \n"
                     + "union all\n"
-                    + "SELECT ID_CONVENIO, CUENTA, FECHA, CONVENIO, '0.00', '0.00',NOMBRE, 'CONVENIO' AS TIPO, 'cyan darken-4' AS COLOR\n"
+                    + "SELECT ID_CONVENIO, CUENTA, FECHA, CONVENIO, '0.00', '0.00',NOMBRE, 'CONVENIO' AS TIPO, 'cyan darken-4' AS COLOR, nombre_usuario_alias(ID_USUARIO) AS USUARIO \n"
                     + "FROM azteca_convenios where FECHA = CURDATE() ORDER BY DIA ASC;";
 //            ID_PAGO, ANIO, SEMANA, DIA, PAIS, CANAL, SUCURSAL, FOLIO, RECUPERACION_CAPITAL, RECUPERACION_MORATORIOS, SALDO_ACTUAL, MORATORIO, FECHA_GESTION, CARGO_AUTOMATICO, CLIENTE_UNICO, ZONA, GERENTE, ID_GESTOR
             ic.rs = ic.st.executeQuery(sql);
@@ -778,6 +778,7 @@ public class ModelDataCuentaAzteca {
                 pago.put("TELEFONO1", ic.rs.getString("TELEFONO1"));
                 pago.put("TIPO", ic.rs.getString("TIPO"));
                 pago.put("COLOR", ic.rs.getString("COLOR"));
+                pago.put("USUARIO", ic.rs.getString("USUARIO"));
                 pagos.add(pago);
             }
             ic.rs.close();
