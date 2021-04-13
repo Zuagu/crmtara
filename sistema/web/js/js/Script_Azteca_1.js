@@ -951,9 +951,12 @@ function insertar_convenio(_myObjConvenio, _myObjGestion) {
             $("#alerta_convenio").append(`${respuesta.resultado} ${respuesta.mensaje}`);
             $("#importe_convenio").val("");
             $("#fecha_convenio").val("");
+            $("#importe_pago_recurrente").val("");
+            let html_TIPO_CONVENIO = $("#TIPO_CONVENIO").html();
+            $("#TIPO_CONVENIO").empty();
+            $("#TIPO_CONVENIO").append(html_TIPO_CONVENIO);
             
             
-
             if (respuesta.resultado !== "NO PERMITIDO" && respuesta.resultado !== "VERIFICA FECHA" && respuesta.resultado !== "VERIFIQUE IMPORTE Y LA FECHA DEL CONVENIO") {
                 insertar_gestion(_myObjGestion);
                 $("#modal_convenio").modal("close");
@@ -1035,6 +1038,7 @@ $("#insert_convenio").click(function () {
     };
     
     let semanas_pago = $("#SEMANAS_PAGO").val() || 1; 
+    let importe_pago_recurrente = $("#importe_pago_recurrente").val() || 0; 
     
     var myObjConvenio = {
         CONVENIO: $("#importe_convenio").val(),
@@ -1050,8 +1054,9 @@ $("#insert_convenio").click(function () {
         CANAL: $('#CANAL').val(),
         ATRASO_MAXIMO: $('#ATRASO_MAXIMO').val(),
         ID_EQUIPO: $('#ID_EQUIPO').val(),
-        SEMANAS_PAGO: $('#SEMANAS_PAGO').val(),
-        PASSwORD: $('#password_convenio').val()
+        SEMANAS_PAGO: semanas_pago,
+        IMPORTE_RECURRENTE: importe_pago_recurrente,
+        PASSwORD: '123'
     };
     var validacion = 0;
     for (var obj in myObjConvenio) {

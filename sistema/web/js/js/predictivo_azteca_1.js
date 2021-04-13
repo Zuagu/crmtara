@@ -839,6 +839,11 @@ function insertar_convenio(_myObjConvenio, _myObjGestion) {
             $("#alerta_convenio").append(`${respuesta.resultado} ${respuesta.mensaje}`);
             $("#importe_convenio").val("");
             $("#fecha_convenio").val("");
+            $("#importe_pago_recurrente").val("");
+            let html_TIPO_CONVENIO = $("#TIPO_CONVENIO").html();
+            $("#TIPO_CONVENIO").empty();
+            $("#TIPO_CONVENIO").append(html_TIPO_CONVENIO);
+            
 
             if (respuesta.resultado !== "NO PERMITIDO" && respuesta.resultado !== "VERIFICA FECHA" && respuesta.resultado !== "VERIFIQUE IMPORTE Y LA FECHA DEL CONVENIO") {
                 insertar_gestion(_myObjGestion);
@@ -915,6 +920,11 @@ $("#insert_convenio").click(function () {
         _F_PREDICTIVO: 0,
         _ID_EQUIPO: $('#ID_EQUIPO').val()
     };
+    
+    
+    let semanas_pago = $("#SEMANAS_PAGO").val() || 1; 
+    let importe_pago_recurrente = $("#importe_pago_recurrente").val() || 0; 
+    
     var myObjConvenio = {
         CONVENIO: $("#importe_convenio").val(),
         FECHA: $("#fecha_convenio").val(),
@@ -929,7 +939,26 @@ $("#insert_convenio").click(function () {
         CANAL: $('#CANAL').val(),
         ATRASO_MAXIMO: $('#ATRASO_MAXIMO').val(),
         ID_EQUIPO: $('#ID_EQUIPO').val(),
+        SEMANAS_PAGO: semanas_pago,
         PASSwORD: $('#password_convenio').val()
+    };
+    var myObjConvenio = {
+        CONVENIO: $("#importe_convenio").val(),
+        FECHA: $("#fecha_convenio").val(),
+        ID_USUARIO: id_usuario,
+        CUENTA: $('#CLIENTE_UNICO').val(),
+        TERRITORIO: $('#TERRITORIO').val(),
+        GERENCIA: $('#GERENCIA').val(),
+        ID_ESTATUS_LLAMADA: $('#codigo_llamada').val(),
+        TIPO_CONVENIO: $('#TIPO_CONVENIO').val(),
+        GERENTE: $('#GERENTE').val(),
+        NOMBRE_CTE: $('#NOMBRE_CTE').val(),
+        CANAL: $('#CANAL').val(),
+        ATRASO_MAXIMO: $('#ATRASO_MAXIMO').val(),
+        ID_EQUIPO: $('#ID_EQUIPO').val(),
+        SEMANAS_PAGO: semanas_pago,
+        IMPORTE_RECURRENTE: importe_pago_recurrente,
+        PASSwORD: '123'
     };
     var validacion = 0;
     for (var obj in myObjConvenio) {

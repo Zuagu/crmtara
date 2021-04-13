@@ -473,9 +473,10 @@ public class ModelDataCuentaAzteca {
             Object _ID_EQUIPO = jsonObject.get("ID_EQUIPO");
             Object _PASSwORD = jsonObject.get("PASSwORD");
             Object _SEMANAS_PAGO = jsonObject.get("SEMANAS_PAGO");
+            Object _IMPORTE_RECURRENTE = jsonObject.get("IMPORTE_RECURRENTE");
 
             StartConexion ic = new StartConexion();
-            String sql = "CALL azteca_insert_convenio( " + _CONVENIO + ", '" + _FECHA + "', " + _ID_USUARIO + ", '" + _CUENTA + "', '" + _TERRITORIO + "', '" + _CANAL + "' , " + _ATRASO_MAXIMO + ", " + _ID_EQUIPO + ", '" + _PASSwORD + "', '" + _GERENCIA + "', '" + _GERENTE + "', '" + _ID_ESTATUS_LLAMADA + "', '" + _TIPO_CONVENIO + "', '" + _NOMBRE + "', '" + _SEMANAS_PAGO + "');";
+            String sql = "CALL azteca_insert_convenio( " + _CONVENIO + ", '" + _FECHA + "', " + _ID_USUARIO + ", '" + _CUENTA + "', '" + _TERRITORIO + "', '" + _CANAL + "' , " + _ATRASO_MAXIMO + ", " + _ID_EQUIPO + ", '" + _PASSwORD + "', '" + _GERENCIA + "', '" + _GERENTE + "', '" + _ID_ESTATUS_LLAMADA + "', '" + _TIPO_CONVENIO + "', '" + _NOMBRE + "', '" + _SEMANAS_PAGO + "','" + _IMPORTE_RECURRENTE + "');";
             System.out.println(sql);
             ic.rs = ic.st.executeQuery(sql);
             // response
