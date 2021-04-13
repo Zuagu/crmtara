@@ -435,21 +435,21 @@
                 <h6 id="alerta_convenio" class="red-text center"></h6>
                 <div class="input-field col s12 m4 l4 offset-m2 offset-l2">
                     <input id="importe_convenio" type="text" class="validate limpiar_numero">
-                    <label for="importe_convenio">Importe</label>
+                    <label for="importe_convenio">Pago inicial</label>
                 </div>
                 <div class="input-field col s12 m4 l4 offset-m1 offset-l1">
                     <input id="fecha_convenio" type="text" class="datepicker" placeholder="Fecha del convenio">
+                    <label for="fecha_convenio">Fecha del convenio</label>
                 </div>
-                <div class="input-field col s12 m4 l4 offset-m2 offset-l2">
-                    <input id="password_convenio" type="password" class="" placeholder="Ingresa Password">
+                <div class="input-field col s12 m4 l4 offset-m2 offset-l2 hide">
+                    <input id="password_convenio" type="password" class="" value="123" placeholder="Ingresa Password">
                 </div>
                 <div class="input-field col s12 m4 l4 offset-m1 offset-l1">
                     <select id="TIPO_CONVENIO">
                         <option value="0" disabled selected>TIPO CONVENIO</option>
                         <option value="1">PAGO UNICO</option>
                         <option value="2">PAGO PARCIAL</option>
-                        <option value="3">PLAN PAGO INICIAL</option>
-                        <option value="4">PLAN PAGO RECURENTE</option>
+                        <option value="3">PLAN PAGO RECURENTE</option>
                     </select>
                 </div>
                 <div id="CAJA_SEMANAS_PAGO" class="input-field col s12 m4 l4 hide">
@@ -511,6 +511,10 @@
                         <option value="54">54 SEMANAS</option>
                         <option value="55">55 SEMANAS</option>
                     </select>
+                </div>
+                <div class="input-field col s12 m4 l4 offset-m2 offset-l2">
+                    <input id="importe_pago_recurrente" type="text" class="" value="123" placeholder="Importe Pago Recurrente">
+                    <label for="importe_pago_recurrente">Importe Pago Recurrente</label>
                 </div>
                 <div class="col s12 center">
                     <br>
